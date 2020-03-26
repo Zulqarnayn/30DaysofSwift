@@ -10,3 +10,9 @@ Hello, I'm Asif and I'm an iOS application developer. Recently I noticed some po
 
 ![Alt text](DemoDay1.gif)
 
+## Day 2 - [CustomFont]()
+> What is needed to learn:
+* how to add fonts in project
+
+![Alt text](DemoDay2.gif)
+
