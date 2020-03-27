@@ -16,3 +16,13 @@ Hello, I'm Asif and I'm an iOS application developer. Recently I noticed some po
 
 ![Alt text](DemoDay2.gif)
 
+## Day 3 - [Corona Update](CoronaUpdate)
+> What is needed to learn:
+* How to make Network request
+* how to manage model
+* how to handle reachability
+* how to add Refresh control
+__*caution: not a beginner project*__
+
+![Alt text](DemoDay3.gif)
+

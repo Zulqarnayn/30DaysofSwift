@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoronaUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-QG-i2T" customClass="CoronaCollectionView" customModule="CoronaUpdate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="294" width="414" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QvT-UO-VEH">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-NA-EQR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="162.5"/>
+                                <string key="text">Coronavirus Cases:
+566,526 
+Deaths:
+25,429 
+Recovered:
+129,360</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-fk-erM">
+                                <rect key="frame" x="0.0" y="214.5" width="414" height="79.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world" translatesAutoresizingMaskIntoConstraints="NO" id="p4u-Gr-GlV">
+                                        <rect key="frame" x="16" y="18" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="p4u-Gr-GlV" secondAttribute="height" multiplier="1:1" id="NsM-qK-U3t"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WsD-Aq-N8c"/>
+                                            <constraint firstAttribute="width" constant="44" id="dvv-Iw-Cyl"/>
+                                            <constraint firstAttribute="width" secondItem="p4u-Gr-GlV" secondAttribute="height" multiplier="1:1" id="vNE-eh-BtO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-tV-ExQ">
+                                        <rect key="frame" x="105" y="0.0" width="279" height="79.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kqn-4f-Y5O">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="79.5"/>
+                                                <state key="normal">
+                                                    <string key="title"> Total 
+Cases</string>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnCasesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xml-Ft-T5E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L4T-LF-nYe">
+                                                <rect key="frame" x="103" y="0.0" width="73" height="79.5"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal">
+                                                    <string key="title"> Total 
+Deaths</string>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnDeathAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5r-7T-rlL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ce0-N1-ykg">
+                                                <rect key="frame" x="206" y="0.0" width="73" height="79.5"/>
+                                                <state key="normal">
+                                                    <string key="title">    Total
+Recovered</string>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnRecoverAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JwZ-lV-qhQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nGc-tV-ExQ" secondAttribute="trailing" constant="30" id="3Ho-CG-nqo"/>
+                                    <constraint firstItem="p4u-Gr-GlV" firstAttribute="leading" secondItem="TXd-fk-erM" secondAttribute="leading" constant="16" id="7YF-M8-6TT"/>
+                                    <constraint firstItem="p4u-Gr-GlV" firstAttribute="centerY" secondItem="TXd-fk-erM" secondAttribute="centerY" id="Dk5-Yx-i2f"/>
+                                    <constraint firstAttribute="bottom" secondItem="nGc-tV-ExQ" secondAttribute="bottom" id="PJz-3D-ByN"/>
+                                    <constraint firstItem="nGc-tV-ExQ" firstAttribute="leading" secondItem="p4u-Gr-GlV" secondAttribute="trailing" constant="45" id="ikM-PR-Ak5"/>
+                                    <constraint firstItem="p4u-Gr-GlV" firstAttribute="width" secondItem="p4u-Gr-GlV" secondAttribute="height" multiplier="1:1" id="psm-X4-gjb"/>
+                                    <constraint firstItem="nGc-tV-ExQ" firstAttribute="top" secondItem="TXd-fk-erM" secondAttribute="top" id="yxP-xt-xig"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9oE-QG-i2T" secondAttribute="trailing" id="9jE-8W-eQ4"/>
+                            <constraint firstItem="TXd-fk-erM" firstAttribute="top" secondItem="jnQ-NA-EQR" secondAttribute="bottom" constant="8" symbolic="YES" id="EGH-qw-kWx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jnQ-NA-EQR" secondAttribute="trailing" id="JVq-AE-MQT"/>
+                            <constraint firstAttribute="bottom" secondItem="9oE-QG-i2T" secondAttribute="bottom" id="MAz-4U-Xqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXd-fk-erM" secondAttribute="trailing" id="a0W-mY-yCk"/>
+                            <constraint firstItem="9oE-QG-i2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="fSh-sa-NCK"/>
+                            <constraint firstItem="jnQ-NA-EQR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gxw-qQ-Pdw"/>
+                            <constraint firstItem="jnQ-NA-EQR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mnY-ob-aYE"/>
+                            <constraint firstItem="9oE-QG-i2T" firstAttribute="top" secondItem="TXd-fk-erM" secondAttribute="bottom" id="pRE-Si-zBa"/>
+                            <constraint firstItem="9oE-QG-i2T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rJw-0A-vnp"/>
+                            <constraint firstItem="TXd-fk-erM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tmI-Qf-7M2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coronaCV" destination="9oE-QG-i2T" id="LIV-le-l3a"/>
+                        <outlet property="lblDescription" destination="jnQ-NA-EQR" id="Vao-ra-4i0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="9fV-hH-U3l">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="XEP-rI-Uge" customClass="DetailsViewController" customModule="CoronaUpdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OUQ-oJ-weO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQj-LW-WCZ">
+                                <rect key="frame" x="0.0" y="109" width="414" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="PBH-gF-mNG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dR-Vy-6c2">
+                                <rect key="frame" x="82" y="148" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2dR-Vy-6c2" secondAttribute="height" multiplier="250:150" id="40l-G9-Ogh"/>
+                                    <constraint firstAttribute="width" constant="250" id="CQN-MD-otJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BJd-nB-2Ld">
+                                <rect key="frame" x="82" y="318" width="250" height="264.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cases: 121323232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yo-JM-i2d">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodayCases: 1212" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-MV-lPh">
+                                        <rect key="frame" x="0.0" y="30.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths: 232 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKE-2n-ezU">
+                                        <rect key="frame" x="0.0" y="61" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodayDeaths: 232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCv-pF-fzh">
+                                        <rect key="frame" x="0.0" y="91.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered: 32232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez4-4E-Zqz">
+                                        <rect key="frame" x="0.0" y="122" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active:232322" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njl-dx-HH7">
+                                        <rect key="frame" x="0.0" y="152.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Critical:23232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2u-oJ-Yfu">
+                                        <rect key="frame" x="0.0" y="183" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CasesPerOneMillion:23232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-gE-F2b">
+                                        <rect key="frame" x="0.0" y="213.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DeathsPerOneMillion:23232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-pO-JdB">
+                                        <rect key="frame" x="0.0" y="244" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-8P-efP">
+                                <rect key="frame" x="362" y="44" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="jiW-8K-4cG"/>
+                                    <constraint firstAttribute="width" secondItem="Yfw-8P-efP" secondAttribute="height" multiplier="1:1" id="nZm-Ou-nzR"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="bntDismissAction:" destination="XEP-rI-Uge" eventType="touchUpInside" id="Obk-6N-lYj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xQj-LW-WCZ" firstAttribute="centerX" secondItem="OUQ-oJ-weO" secondAttribute="centerX" id="1mZ-uL-0q5"/>
+                            <constraint firstItem="2dR-Vy-6c2" firstAttribute="centerX" secondItem="OUQ-oJ-weO" secondAttribute="centerX" id="256-aC-gNP"/>
+                            <constraint firstItem="BJd-nB-2Ld" firstAttribute="top" secondItem="2dR-Vy-6c2" secondAttribute="bottom" constant="20" id="7uK-aW-UhL"/>
+                            <constraint firstItem="xQj-LW-WCZ" firstAttribute="top" secondItem="3WA-QR-mzy" secondAttribute="top" constant="65" id="AnE-EQ-ahz"/>
+                            <constraint firstItem="xQj-LW-WCZ" firstAttribute="leading" secondItem="3WA-QR-mzy" secondAttribute="leading" id="Uoo-xj-Dtc"/>
+                            <constraint firstItem="Yfw-8P-efP" firstAttribute="top" secondItem="3WA-QR-mzy" secondAttribute="top" id="adE-Ut-2hc"/>
+                            <constraint firstItem="BJd-nB-2Ld" firstAttribute="centerX" secondItem="OUQ-oJ-weO" secondAttribute="centerX" id="f7G-vG-Ut7"/>
+                            <constraint firstItem="3WA-QR-mzy" firstAttribute="trailing" secondItem="xQj-LW-WCZ" secondAttribute="trailing" id="hlY-cL-4hh"/>
+                            <constraint firstItem="3WA-QR-mzy" firstAttribute="trailing" secondItem="Yfw-8P-efP" secondAttribute="trailing" constant="16" id="iDe-h0-Rzh"/>
+                            <constraint firstItem="BJd-nB-2Ld" firstAttribute="leading" secondItem="2dR-Vy-6c2" secondAttribute="leading" id="jtQ-v4-wzq"/>
+                            <constraint firstItem="2dR-Vy-6c2" firstAttribute="top" secondItem="xQj-LW-WCZ" secondAttribute="bottom" constant="10" id="mEs-jf-h7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3WA-QR-mzy"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageViewFlag" destination="2dR-Vy-6c2" id="Qzm-Il-b3a"/>
+                        <outlet property="lblActive" destination="njl-dx-HH7" id="tjq-85-QIV"/>
+                        <outlet property="lblCases" destination="6yo-JM-i2d" id="LVs-kQ-pt4"/>
+                        <outlet property="lblCasesPM" destination="tTf-gE-F2b" id="nIH-TA-4Io"/>
+                        <outlet property="lblCountryName" destination="xQj-LW-WCZ" id="3R0-PQ-3db"/>
+                        <outlet property="lblCritical" destination="R2u-oJ-Yfu" id="PAu-lM-d4n"/>
+                        <outlet property="lblDeaths" destination="dKE-2n-ezU" id="gkF-De-85j"/>
+                        <outlet property="lblDeathsPM" destination="H7n-pO-JdB" id="U24-ft-6rW"/>
+                        <outlet property="lblRecovered" destination="Ez4-4E-Zqz" id="Aae-hB-5S1"/>
+                        <outlet property="lblTodayCases" destination="GWs-MV-lPh" id="3fs-UP-R0f"/>
+                        <outlet property="lblTodayDeaths" destination="sCv-pF-fzh" id="Xpr-Ei-TFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6G-Mv-FYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cases: 121323232" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NE6-xv-2aN">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="20.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </objects>
+            <point key="canvasLocation" x="1160.8695652173915" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="512" height="512"/>
+        <image name="world" width="512" height="512"/>
+    </resources>
+</document>
