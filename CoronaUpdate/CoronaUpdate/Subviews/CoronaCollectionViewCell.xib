@@ -60,8 +60,11 @@ Recovered</string>
                             <constraint firstItem="9Zu-Yv-aKF" firstAttribute="width" secondItem="E6V-dT-GOa" secondAttribute="width" id="edS-pJ-mYP"/>
                         </constraints>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-4U-Zcy">
-                        <rect key="frame" x="16" y="52" width="55" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-4U-Zcy">
+                        <rect key="frame" x="16" y="52" width="350" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="350" id="HTX-fK-gM2"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>

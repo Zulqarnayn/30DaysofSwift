@@ -15,6 +15,7 @@
 		E026ED83242DF049004FDA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E026ED82242DF049004FDA59 /* Assets.xcassets */; };
 		E026ED86242DF049004FDA59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E026ED84242DF049004FDA59 /* LaunchScreen.storyboard */; };
 		E026ED92242DF22F004FDA59 /* CoronaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E026ED91242DF22F004FDA59 /* CoronaModel.swift */; };
+		E03281D4242FA7EB00B2BDDA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03281D3242FA7EB00B2BDDA /* Extensions.swift */; };
 		E0B71009242E41E4000FFDA4 /* CoronaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B71008242E41E4000FFDA4 /* CoronaCollectionView.swift */; };
 		E0B7100C242E41F9000FFDA4 /* CoronaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B7100A242E41F9000FFDA4 /* CoronaCollectionViewCell.swift */; };
 		E0B7100D242E41F9000FFDA4 /* CoronaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0B7100B242E41F9000FFDA4 /* CoronaCollectionViewCell.xib */; };
@@ -34,6 +35,7 @@
 		E026ED85242DF049004FDA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E026ED87242DF049004FDA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E026ED91242DF22F004FDA59 /* CoronaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaModel.swift; sourceTree = "<group>"; };
+		E03281D3242FA7EB00B2BDDA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E0B71008242E41E4000FFDA4 /* CoronaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaCollectionView.swift; sourceTree = "<group>"; };
 		E0B7100A242E41F9000FFDA4 /* CoronaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0B7100B242E41F9000FFDA4 /* CoronaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoronaCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		E026ED78242DF047004FDA59 /* CoronaUpdate */ = {
 			isa = PBXGroup;
 			children = (
+				E03281D2242FA7C600B2BDDA /* Helpers */,
 				E0B71007242E41B8000FFDA4 /* Subviews */,
 				E026ED90242DF208004FDA59 /* Support */,
 				E026ED8F242DF1F4004FDA59 /* Storyboard */,
@@ -134,6 +137,14 @@
 				E026ED7B242DF047004FDA59 /* SceneDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		E03281D2242FA7C600B2BDDA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E03281D3242FA7EB00B2BDDA /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E0B71007242E41B8000FFDA4 /* Subviews */ = {
@@ -265,6 +276,7 @@
 				E026ED7E242DF047004FDA59 /* ViewController.swift in Sources */,
 				E026ED7A242DF047004FDA59 /* AppDelegate.swift in Sources */,
 				E0B7100C242E41F9000FFDA4 /* CoronaCollectionViewCell.swift in Sources */,
+				E03281D4242FA7EB00B2BDDA /* Extensions.swift in Sources */,
 				E026ED7C242DF047004FDA59 /* SceneDelegate.swift in Sources */,
 				E0B7100F242E8A62000FFDA4 /* DetailsViewController.swift in Sources */,
 				E0B71009242E41E4000FFDA4 /* CoronaCollectionView.swift in Sources */,

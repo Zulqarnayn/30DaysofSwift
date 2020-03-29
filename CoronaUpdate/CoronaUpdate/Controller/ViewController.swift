@@ -78,7 +78,9 @@ class ViewController: UIViewController {
     
     func fetchData() {
         let session = URLSession.shared
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {
+             return
+        }
         session.dataTask(with: url) { (data, response, error) in
             
             if error != nil {
@@ -86,35 +88,21 @@ class ViewController: UIViewController {
                 return
             }
             
+            guard let data = data else {
+                return
+            }
+            
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers )
-                
-                self.coronaModels = [CoronaModel]()
+                self.coronaModels = try JSONDecoder().decode([CoronaModel].self, from: data)
                 
                 var cases = 0
                 var death = 0
                 var recover = 0
                 
-                for dictionary in json as! [[String: AnyObject]] {
-                    let model = CoronaModel()
-                    model.countryName = dictionary["country"] as? String
-                    let contryDic = dictionary["countryInfo"] as? [String: AnyObject]
-                    model.countryFlag = contryDic!["flag"] as? String
-                    model.cases = dictionary["cases"] as? NSNumber
-                    model.todayCases = dictionary["todayCases"] as? NSNumber
-                    model.deaths = dictionary["deaths"] as? NSNumber
-                    model.todayDeaths = dictionary["todayDeaths"] as? NSNumber
-                    model.recovered = dictionary["recovered"] as? NSNumber
-                    model.active = dictionary["active"] as? NSNumber
-                    model.critical = dictionary["critical"] as? NSNumber
-                    model.casesPerOneMillion = dictionary["casesPerOneMillion"] as? NSNumber
-                    model.deathsPerOneMillion = dictionary["deathsPerOneMillion"] as? NSNumber
-                    
-                    self.coronaModels?.append(model)
-                    cases += model.cases?.intValue ?? 0
-                    death += model.deaths?.intValue ?? 0
-                    recover += model.recovered?.intValue ?? 0
-                    
+                for model in self.coronaModels! {
+                    cases += model.cases ?? 0
+                    death += model.deaths ?? 0
+                    recover += model.recovered ?? 0
                 }
                 
                 self.coronaCV.colData = self.coronaModels!
@@ -123,11 +111,41 @@ class ViewController: UIViewController {
                     self.updateData(cases: cases, deaths: death, recovered: recover)
                 }
                 
-                
-                
             } catch let jsonError {
                 print(jsonError)
             }
+            
+            
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers )
+//
+//                self.coronaModels = [CoronaModel]()
+//
+//                var cases = 0
+//                var death = 0
+//                var recover = 0
+//
+//                for dictionary in json as! [[String: AnyObject]] {
+//                    let model = CoronaModel.init(json: dictionary)
+//
+//                    self.coronaModels?.append(model)
+//                    cases += model.cases?.intValue ?? 0
+//                    death += model.deaths?.intValue ?? 0
+//                    recover += model.recovered?.intValue ?? 0
+//
+//                }
+//
+//                self.coronaCV.colData = self.coronaModels!
+//                DispatchQueue.main.async {
+//                    self.coronaCV.reloadData()
+//                    self.updateData(cases: cases, deaths: death, recovered: recover)
+//                }
+//
+//
+//
+//            } catch let jsonError {
+//                print(jsonError)
+//            }
             
             
         }.resume()

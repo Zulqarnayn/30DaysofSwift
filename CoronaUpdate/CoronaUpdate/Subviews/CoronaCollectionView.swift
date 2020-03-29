@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 protocol CoronaCollectionViewDelegate: NSObject {
     func tapped(model: CoronaModel)
@@ -39,30 +38,30 @@ class CoronaCollectionView: UICollectionView {
         if type == .cases {
             colData.sort {
                 if ascending {
-                    return (($0.cases) as! Int) < (($1.cases) as! Int)
+                    return (($0.cases)!) < (($1.cases)!)
                 }
                 else {
-                    return (($0.cases) as! Int) > (($1.cases) as! Int)
+                    return (($0.cases)!) > (($1.cases)!)
                 }
             }
         }
         else if type == .deaths {
             colData.sort {
                 if ascending {
-                    return (($0.deaths) as! Int) < (($1.deaths) as! Int)
+                    return (($0.deaths)!) < (($1.deaths)!)
                 }
                 else {
-                    return (($0.deaths) as! Int) > (($1.deaths) as! Int)
+                    return (($0.deaths)!) > (($1.deaths)!)
                 }
             }
         }
         else if type == .recover {
             colData.sort {
                 if ascending {
-                    return (($0.recovered) as! Int) < (($1.recovered) as! Int)
+                    return (($0.recovered)!) < (($1.recovered)!)
                 }
                 else {
-                    return (($0.recovered) as! Int) > (($1.recovered) as! Int)
+                    return (($0.recovered)!) > (($1.recovered)!)
                 }
             }
         }
@@ -90,11 +89,15 @@ extension CoronaCollectionView: UICollectionViewDataSource {
         
         let model = colData[indexPath.row]
         
-        cell.countryImgView.sd_setImage(with: URL(string: model.countryFlag!), placeholderImage: #imageLiteral(resourceName: "world"))
-        cell.lblCountry.text = model.countryName!
-        cell.lblTotalCases.text = String(format: "%d", model.cases?.intValue ?? 0)
-        cell.lblTotalDeaths.text = String(format: "%d", model.deaths?.intValue ?? 0)
-        cell.lblTotalRecovered.text = String(format: "%d", model.recovered?.intValue ?? 0)        
+        //thumb url
+        if model.countryInfo!.flag != nil {
+            cell.countryImgView.loadImageUsingUrlString(urlString: model.countryInfo!.flag!)
+        }
+        
+        cell.lblCountry.text = model.country!
+        cell.lblTotalCases.text = String(format: "%d", model.cases ?? 0)
+        cell.lblTotalDeaths.text = String(format: "%d", model.deaths ?? 0)
+        cell.lblTotalRecovered.text = String(format: "%d", model.recovered ?? 0)
         return cell
     }
     

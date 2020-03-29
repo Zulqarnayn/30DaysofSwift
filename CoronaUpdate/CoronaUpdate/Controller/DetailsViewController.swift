@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class DetailsViewController: UIViewController {
     
@@ -31,17 +30,17 @@ class DetailsViewController: UIViewController {
     }
     
     func initialize() {
-        lblCountryName.text = model?.countryName
-        ImageViewFlag.sd_setImage(with: URL(string: model!.countryFlag!), placeholderImage: #imageLiteral(resourceName: "world"))
-        lblCases.text = String(format: "Cases  : %d", model?.cases?.intValue ?? 0)
-        lblDeaths.text = String(format: "Deaths  : %d", model?.deaths?.intValue ?? 0)
-        lblRecovered.text = String(format: "Recovered  : %d", model?.recovered?.intValue ?? 0)
-        lblTodayCases.text = String(format: "Today Cases   : %d", model?.todayCases?.intValue ?? 0)
-        lblTodayDeaths.text = String(format: "Today Deaths  : %d", model?.todayDeaths?.intValue ?? 0)
-        lblActive.text = String(format: "Active  :  %d", model?.active?.intValue ?? 0)
-        lblCritical.text = String(format: "Critical  : %d", model?.critical?.intValue ?? 0)
-        lblCasesPM.text = String(format: "Cases Per Million  : %d", model?.casesPerOneMillion?.intValue ?? 0)
-        lblDeathsPM.text = String(format: "Deaths Per Million  : %d", model?.deathsPerOneMillion?.intValue ?? 0)
+        lblCountryName.text = model?.country
+        ImageViewFlag.loadImageUsingUrlString(urlString: (model?.countryInfo!.flag)!)
+        lblCases.text = String(format: "Cases  : %d", model?.cases ?? 0)
+        lblDeaths.text = String(format: "Deaths  : %d", model?.deaths ?? 0)
+        lblRecovered.text = String(format: "Recovered  : %d", model?.recovered ?? 0)
+        lblTodayCases.text = String(format: "Today Cases   : %d", model?.todayCases ?? 0)
+        lblTodayDeaths.text = String(format: "Today Deaths  : %d", model?.todayDeaths ?? 0)
+        lblActive.text = String(format: "Active  :  %d", model?.active ?? 0)
+        lblCritical.text = String(format: "Critical  : %d", model?.critical ?? 0)
+        lblCasesPM.text = String(format: "Cases Per Million  : %f", model?.casesPerOneMillion ?? 0)
+        lblDeathsPM.text = String(format: "Deaths Per Million  : %f", model?.deathsPerOneMillion ?? 0)
     }
 
     @IBAction func bntDismissAction(_ sender: Any) {
