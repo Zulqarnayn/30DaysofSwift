@@ -8,13 +8,13 @@ Hello, I'm Asif and I'm an iOS application developer. Recently I noticed some po
 > What is needed to learn:
 * how to use Timer
 
-![Alt text](DemoDay1.gif)
+![Alt text](Demo/DemoDay1.gif)
 
 ## Day 2 - [CustomFont](Day2-CustomFont/Day-2-CustomFont)
 > What is needed to learn:
 * how to add fonts in project
 
-![Alt text](DemoDay2.gif)
+![Alt text](Demo/DemoDay2.gif)
 
 ## Day 3 - [Corona Update](CoronaUpdate)
 > What is needed to learn:
@@ -22,7 +22,19 @@ Hello, I'm Asif and I'm an iOS application developer. Recently I noticed some po
 * how to manage model
 * how to handle reachability
 * how to add Refresh control
+* how to use collection view
+* how to make asynce call for image loading
+* how to use cache
+
 __*caution: not a beginner project*__
 
-![Alt text](DemoDay3.gif)
+![Alt text](Demo/DemoDay3.gif)
+
+## Day 4 - [Tip Calculator](CoronaUpdate)
+> What is needed to learn:
+* how to use autolayout 
+* how to use textfield and system Keyboard
+* how to use animation
+
+![Alt text](Demo/DemoDay4.gif)
 
