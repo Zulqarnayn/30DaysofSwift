@@ -30,7 +30,7 @@ __*caution: not a beginner project*__
 
 ![Alt text](Demo/DemoDay3.gif)
 
-## Day 4 - [Tip Calculator](CoronaUpdate)
+## Day 4 - [Tip Calculator](TipCalculator)
 > What is needed to learn:
 * how to use autolayout 
 * how to use textfield and system Keyboard
@@ -38,3 +38,11 @@ __*caution: not a beginner project*__
 
 ![Alt text](Demo/DemoDay4.gif)
 
+## Day  - [Auto Complete](AutoComplete)
+
+> What is needed to learn:
+
+* how to use Trie DS to find related words effectively
+* how to use textfield and maipulate text
+
+![Alt text](Demo/DemoDay5.gif)
